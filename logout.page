@@ -1,0 +1,9 @@
+<html>
+  <body>
+    <?php
+      session_start();
+      session_destroy();
+      header("location:http://japaneseproducthere.sitemix.jp/index2.php");
+    ?>
+  </body>
+</html>
