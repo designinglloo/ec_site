@@ -1,0 +1,11 @@
+<html>
+  <body>
+    <?php
+    session_start();
+      //write database
+	  $_SESSION['submit_succeed']=1;
+	  echo $_SESSION['submit_succeed'];
+	  header('location:http://japaneseproducthere.sitemix.jp/index2.php');
+	?>
+  </body>
+</html>
