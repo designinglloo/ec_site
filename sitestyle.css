@@ -1,0 +1,56 @@
+    .button_mouse_moving_on{
+      background-color:#f6bfbc;
+      width:100%;
+      height:5%;
+      font-size:large;
+      color:#fef4f4 ;
+      border-top-width:1px;
+      border-left-width:0;
+      border-right-width:0;
+      border-bottom-width:0;
+    }
+    .find_item_button_style{
+      position=relative;
+      font-size:large;
+    margin-top:10px;
+      color:#fef4f4 ;
+      border-width:0;
+      background-color:#ee827c;
+    }
+    .find_item_button_mouse_moving_on{
+      position=relative;
+      margin-top:10px;
+      font-size:large;
+      color:#fef4f4 ;
+      border-width:0;
+      background-color:#f6bfbc;
+    }
+    .login_button_style{
+      background-color:#ee827c;
+      width:30%;
+      height:5%;
+      font-size:large;
+      color:#fef4f4;
+      border-width:0;
+      margin-bottom:10px;
+    }
+    .login_button_mouse_moving_on{
+      background-color:#f6bfbc;
+      width:30%;
+      height:5%;
+      font-size:large;
+      color:#fef4f4 ;
+      border-width:0;
+      margin-bottom:10px;
+    }
+    .button_style{
+      background-color:#ee827c;
+      width:100%;
+      height:5%;
+      font-size:large;
+      color:#fef4f4 ;
+      border-top-width:1px;
+      border-left-width:0;
+      border-right-width:0;
+      border-bottom-width:0;
+    }
