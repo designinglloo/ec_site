@@ -1,11 +1,35 @@
 <html>
+  <head>
+  </head>
   <body>
     <?php
-    session_start();
-      //write database
-	  $_SESSION['submit_succeed']=1;
-	  echo $_SESSION['submit_succeed'];
-	  header('location:http://japaneseproducthere.sitemix.jp/index2.php');
+	  session_start();
+	  $date=date('Y-m-d');
+	  
+	  try{
+	    $con=mysql_connect("localhost","***","***");  //connect to the database
+  	    if (!$con){
+          die('Could not connect: ' . mysql_error());
+        }
+	    mysql_select_db("akumarose_db",$con);             
+	    
+		$result=mysql_query("SELECT * FROM id_pass WHERE user_id='$_POST[user_id_text]'",$con); //check whether someoneelse has already registered with the same id
+		$row=mysql_fetch_array($result);
+		if($row['user_id']==""){
+		
+	      $sql="INSERT INTO id_pass (user_id,user_pass,user_email,register_date)
+	      VALUES ('$_POST[user_id_text]','$_POST[user_pass_text]','$_POST[user_email_text]','$date')";
+	      mysql_query($sql,$con);                    //insert new user's id and password
+	  
+	      $_SESSION['submit_succeed']=1;
+		}else{
+		  $_SESSION['submit_succeed']=2;
+		}
+	  }catch (Exception $e){
+	    $_SESSION['submit_succed']=0;
+	  }
+	  
+	  header('location:index2.php');
 	?>
   </body>
 </html>
